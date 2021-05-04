@@ -7,10 +7,10 @@ python3 preprocess.py --dataset=sparc --remove_from
 # 2. train and evaluate.
 #    the result (models, logs, prediction outputs) are saved in $LOGDIR
 
-GLOVE_PATH="/home/lily/rz268/dialog2sql/word_emb/glove.840B.300d.txt" # you need to change this
+GLOVE_PATH="/home/jonathanyang0127/editsql/glove.840B.300d.txt" # you need to change this
 LOGDIR="logs_sparc_editsql"
 
-CUDA_VISIBLE_DEVICES=0 python3 run.py --raw_train_filename="data/sparc_data_removefrom/train.pkl" \
+CUDA_VISIBLE_DEVICES=3 python3 run.py --raw_train_filename="data/sparc_data_removefrom/train.pkl" \
           --raw_validation_filename="data/sparc_data_removefrom/dev.pkl" \
           --database_schema_filename="data/sparc_data_removefrom/tables.json" \
           --embedding_filename=$GLOVE_PATH \

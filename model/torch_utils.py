@@ -6,7 +6,7 @@ import torch.nn.functional as F
 import numpy as np
 
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
-
+print(device)
 def linear_layer(exp, weights, biases=None):
     # exp: input as size_1 or 1 x size_1
     # weight: size_1 x size_2
